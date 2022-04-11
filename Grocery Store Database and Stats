@@ -1,0 +1,19 @@
+CREATE TABLE Store (ID INTEGER PRIMARY KEY, name TEXT, price INTEGER);
+INSERT INTO Store VAlUES (1, "milk", 2);
+INSERT INTO Store  VALUES (2, "eggs", 3);
+INSERT INTO Store VALUES (3, "bread", 1);
+INSERT INTO Store VALUES (4, "butter", 2);
+INSERT INTO Store VALUES (5, "chips", 1);
+INSERT INTO Store VALUES (6, "dip", 2);
+INSERT INTO Store VALUES (7, "tuna",1);
+INSERT INTO Store VALUES (8, "carrots",3);
+INSERT INTO Store VALUES (9, "peppers", 2);
+INSERT INTO Store VALUES (10, "salt", 5);
+INSERT INTO Store VALUES (11, "flour", 4);
+INSERT INTO Store VALUES (12, "sugar", 4);
+INSERT INTO Store VALUES (13, "baking soda", 3);
+INSERT INTO Store VALUES (14, "vanilla", 7);
+INSERT INTO Store VALUES (15, "chocolate", 6);
+SELECT * FROM store;
+
+SELECT SUM(price) FROM STORE; 
