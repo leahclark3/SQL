@@ -1,0 +1,46 @@
+CREATE TABLE candy_crush
+    (ID INTEGER PRIMARY KEY, date INTEGER, level INTEGER, score INTEGER) ;
+    
+INSERT INTO candy_crush
+    VALUES (1,"04-02-2022", 782, 2265987);
+INSERT INTO candy_crush    VALUES (2,"04-02-2022", 783, 2654871);
+INSERT INTO candy_crush    VALUES (3,"04-02-2022", 784, 894543);
+INSERT INTO candy_crush    VALUES (4,"04-03-2022", 785, 6514968);
+INSERT INTO candy_crush    VALUES (5,"04-03-2022", 786, 2598700);
+INSERT INTO candy_crush    VALUES (6,"04-07-2022", 787, 3216854);
+INSERT INTO candy_crush    VALUES (7,"04-07-2022", 788, 2265527);
+INSERT INTO candy_crush    VALUES (8,"04-07-2022", 789, 6549815);
+INSERT INTO candy_crush    VALUES (9,"04-12-2022", 790, 2025803);
+INSERT INTO candy_crush    VALUES (10,"04-12-2022", 791, 7898516);
+INSERT INTO candy_crush    VALUES (11,"04-13-2022", 792, 65106549);
+INSERT INTO candy_crush    VALUES (12,"04-15-2022", 793, 10254893);
+INSERT INTO candy_crush    VALUES (13,"04-17-2022", 794, 95613200);
+INSERT INTO candy_crush    VALUES (14,"04-18-2022", 795, 2302184);
+INSERT INTO candy_crush    VALUES (15,"04-18-2022", 796, 9863014);
+INSERT INTO candy_crush    VALUES (16,"04-18-2022", 797, 30014820);
+INSERT INTO candy_crush    VALUES (17,"04-18-2022", 798, 30014820);
+INSERT INTO candy_crush    VALUES (18,"04-18-2022", 799, 39875520);
+INSERT INTO candy_crush    VALUES (19,"04-18-2022", 800, 9856321);
+INSERT INTO candy_crush    VALUES (20,"04-22-2022", 801, 35869820);
+INSERT INTO candy_crush    VALUES (21,"04-22-2022", 802, 98703241);
+
+SELECT * FROM candy_crush;
+
+ALTER TABLE candy_crush ADD stars TEXT 
+default "unknown";
+
+INSERT INTO candy_crush    VALUES (22,"04-23-2022", 803, 31849150, 3);
+INSERT INTO candy_crush    VALUES (23,"04-23-2022", 804, 2036848, 2);
+INSERT INTO candy_crush    VALUES (24,"04-24-2022", 805, 84562700, 3);
+
+SELECT * FROM candy_crush;
+
+UPDATE candy_crush SET score = "10000000" WHERE id=19;
+
+SELECT * FROM candy_crush;
+
+DELETE FROM candy_crush WHERE id=21; 
+
+ SELECT * FROM candy_crush;
+
+
