@@ -1,3 +1,4 @@
+
 /* Source: http://www.boxofficemojo.com/alltime/world/ */
 CREATE TABLE topmovies(
    Rank        INTEGER,
@@ -112,16 +113,17 @@ INSERT INTO topmovies(Rank,Title,Studio,Worldwide,Domestic,DomesticPct,Overseas,
 INSERT INTO topmovies(Rank,Title,Studio,Worldwide,Domestic,DomesticPct,Overseas,OverseasPct,Year) VALUES (99,'Casino Royale','Sony',599.00,167.40,0.28,431.60,0.72,2006);
 INSERT INTO topmovies(Rank,Title,Studio,Worldwide,Domestic,DomesticPct,Overseas,OverseasPct,Year) VALUES (100,'Tangled','BV',591.80,200.80,0.34,391.00,0.66,2010);
 
-
-SELECT * FROM topmovies;
-
+--What is the average worldwide %?
 SELECT  AVG(Worldwide) FROM topmovies; 
+--What is the max Domestic % of Fox Studio movies?
 SELECT MAX(DomesticPCT)AS FoxMAXDomesticPCT FROM topmovies WHERE Studio= "Fox";  
+--What is the min overseas %?
 SELECT MIN(Overseas) FROM topmovies; 
-
+--What is the the title and the worldwide sum of moives that were greater than 1800?
 SELECT Title, SUM(Worldwide)AS topmoivesworldwide FROM topmovies GROUP BY Title HAVING Worldwide > "1800";
+--What is the title and the domestic % of all moves that were released before 1999?
 SELECT title, AVG(DomesticPct) FROM topmovies GROUP BY title HAVING year <1999;
-
+--Rate movies from the worldwide %.
 SELECT Title, year,
             CASE
                 WHEN Worldwide > 2000 THEN "Above Max"
@@ -131,8 +133,9 @@ SELECT Title, year,
                 ELSE "Below Target"
             END as "Rate"
           FROM topmovies;
-
+--Find movies that are owned by Fox Stuido and realsed worldwide before 2000.
 SELECT Title FROM topmovies WHERE Studio = "Fox" AND Worldwide >"2000"; 
+--Display the movies from Sony and WB. 
 SElECT Title FROM topmovies WHERE Studio = "Sony" OR Studio ="WB";
 
  
