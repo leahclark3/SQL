@@ -1,3 +1,5 @@
+/**--Create a grocery store database**/
+
 CREATE TABLE Store (ID INTEGER PRIMARY KEY, name TEXT, price INTEGER);
 INSERT INTO Store VAlUES (1, "milk", 2);
 INSERT INTO Store  VALUES (2, "eggs", 3);
@@ -16,4 +18,9 @@ INSERT INTO Store VALUES (14, "vanilla", 7);
 INSERT INTO Store VALUES (15, "chocolate", 6);
 SELECT * FROM store;
 
+--Overall price
 SELECT SUM(price) FROM STORE; 
+
+--display the database ordered by price.
+SELECT * FROM store ORDER BY price desc;
+
