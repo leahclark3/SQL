@@ -25,20 +25,20 @@ INSERT INTO candy_crush    VALUES (20,"04-22-2022", 801, 35869820);
 INSERT INTO candy_crush    VALUES (21,"04-22-2022", 802, 98703241);
 
 SELECT * FROM candy_crush;
-
+--Add new column for stars.
 ALTER TABLE candy_crush ADD stars TEXT 
 default "unknown";
-
+--Add a few rows.
 INSERT INTO candy_crush    VALUES (22,"04-23-2022", 803, 31849150, 3);
 INSERT INTO candy_crush    VALUES (23,"04-23-2022", 804, 2036848, 2);
 INSERT INTO candy_crush    VALUES (24,"04-24-2022", 805, 84562700, 3);
 
 SELECT * FROM candy_crush;
-
+--Updated id 19 and change the score to 10000000.
 UPDATE candy_crush SET score = "10000000" WHERE id=19;
 
 SELECT * FROM candy_crush;
-
+--Remove id # 21.
 DELETE FROM candy_crush WHERE id=21; 
 
  SELECT * FROM candy_crush;
