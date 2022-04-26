@@ -135,7 +135,7 @@ SELECT Title, year,
           FROM topmovies;
 --Find movies that are owned by Fox Stuido and realsed worldwide before 2000.
 SELECT Title FROM topmovies WHERE Studio = "Fox" AND Worldwide >"2000"; 
---Display the movies from Sony and WB. 
+--Display the movies titles from Sony and WB. 
 SElECT Title FROM topmovies WHERE Studio = "Sony" OR Studio ="WB";
 
  
