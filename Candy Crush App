@@ -1,3 +1,5 @@
+--Created a table for one of my favorite games. CANDY CRUSH!---
+
 CREATE TABLE candy_crush
     (ID INTEGER PRIMARY KEY, date INTEGER, level INTEGER, score INTEGER) ;
     
